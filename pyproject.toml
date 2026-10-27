@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "diegofrein-citeaudit"
+version = "0.1.0"
+description = "把输出中的引用标记与给定上下文逐一比对，标出找不到对应原文的引用"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "diegofrein" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://diegofrein.github.io"
+Repository = "https://github.com/diegofrein/citeaudit"
+Issues = "https://github.com/diegofrein/citeaudit/issues"
+
+[project.scripts]
+citeaudit = "citeaudit:main"
+
+[tool.setuptools]
+py-modules = ["citeaudit"]
